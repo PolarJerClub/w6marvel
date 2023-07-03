@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<!-- Flask Flash message to user -->
+{% with messages = get_flashed_messages(with_categories = true) %}
+    {% if messages %}
+        {% for cat, msg in messages %}
+            {% if cat == 'auth-success' %}
+                <div class="container">
+                    {{ msg }}
+                    <button type="button" class="close" data-dismiss="alert" onclick="this.parentElement.style.display='none'">&times;</button>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+
+<header class="hero-section">
+    <h3 class="header-text">Welcome to your Marvel Character creation, {{current_user.username }}!</h3>
+    <main class="container list-group">
+        <div class="row">
+            <aside class = "col-12 col-md-6">
+                <h3>Profile Details</h3>
+                <li class="list-group-item">Email: {{ current_user.email }}</li>
+                <li class="list-group-item">Token: {{ current_user.token }}</li>
+            </aside>
+        </div>
+    </main>
+</header>
+<div class="creators">
+    <main class="container marvel_form">
+        <div class="col">
+            <aside class="col-12 col-md-6">
+                <h2>Character Creator</h2>
+                {% include 'marvelform.html' %}
+            </aside>
+        </div>
+    </main>
+    <main class="container marvel_form">
+        <div class="col">
+            <aside class="col-12 col-md-6">
+                <h2>Character Generator</h2>
+                {% include 'marvelform2.html' %}
+            </aside>
+        </div>
+    </main>
+</div>
+
+<div class="container">
+    <h1 class="marvel-title">Your Characters</h1>
+    <div class="row">
+        {% for marvel in marvels %}
+            <div class="card" style="width: 18rem;">
+                <img src="../../static/images/Marvel_Logo.svg.png" class="card-img-top" alt="new character">
+                <div class="card-body">
+                <h5 class="card-title">{{ marvel.name }}</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{ marvel.description }}</li>
+                <li class="list-group-item">{{ marvel.comics_appeared_in }}</li>
+                <li class="list-group-item">{{ marvel.super_power }}</li>
+                </ul>
+                <div class="card-body">
+                <a href="#" class="card-link">Update</a>
+                <a href="#" class="card-link">Delete</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+{% endblock content %}

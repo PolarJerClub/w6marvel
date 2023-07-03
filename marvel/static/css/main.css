@@ -1,0 +1,158 @@
+/* Nav Styles */
+.ct-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Background Image */
+
+body {
+/* The image used */
+background-image: url('../images/marvel_bg1.jpg');
+
+/* Full height */
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+font-family: 'Comics', sans-serif;
+}
+
+.container {
+    color: aliceblue;
+}
+
+h1 {
+    color: white;
+}
+
+/* Target Main Image */
+.ct-nav img {
+    width: 25%;
+    max-width: 100%;
+    margin-left: 2vw;
+    padding-top: 20px;
+}
+
+ul#horizontal-list {
+    min-width: 696px;
+    list-style: none;
+    padding-top: 20px;
+}
+
+ul#horizontal-list li,
+ul#horizontal-list a {
+    display: inline;
+    text-decoration: none;
+    padding: 0.5vw;
+    margin-right: 0.2vw;
+    color: white;
+    background-color: red;
+}
+
+/* End of Nav Styles */
+/* Hero/Header Portion */
+#header-text {
+    padding: 3vw;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 48px;
+    -webkit-text-stroke: 2px red;
+}
+
+#btn1 {
+    padding-top: 3vh;
+}
+
+/* Home page Styles */
+/* middle section */
+#middle-section {
+    text-align: center;
+}
+
+#middle-text {
+    text-align: center;
+    padding-top: 13vh;
+    color: aliceblue;
+    -webkit-text-stroke: 2px red;
+}
+
+#middle-text h2 {
+    padding: 1.5vw;
+}
+
+/* end of middle section */
+/* Features Section */
+#deadpool-image,
+#thanos-image,
+#spidey-ic-image,
+#antman-image,
+#mandolorian-image,
+#spidey-image{
+    margin-bottom: 1vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 250px;
+    width: 250px;
+}
+
+#features-section {
+    margin: 8vw;
+    color: aliceblue;
+}
+
+/* End of Features Section */
+/* Community Section */
+#community-section h1, h4{
+    color: white;
+    -webkit-text-stroke: 2px red;
+}
+
+/* end of community section */
+/* Footer Section */
+.footer-text-flex {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3vh;
+}
+
+#footer-logo {
+    width: 100%;
+    max-width: 100%;
+}
+
+#footer {
+    border-top: 3px solid black;
+    margin-top: 10vh;
+}
+
+/* End footer section */
+
+/* PROFILE SECTION */
+
+.header-text, h2, h3, .marvel-title {
+    color: whitesmoke;
+    -webkit-text-stroke: 2px red;
+    padding: 1.5vh;
+    text-align: center;
+}
+
+.list-group {
+    text-align: center;
+    padding-bottom: 5vh;
+}
+
+.creators {
+    display: flex;
+    align-items: self-start;
+    padding-left: 10%;
+    background-color: black;
+}
+
+.card-title {
+    color: black;
+}

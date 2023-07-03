@@ -1,0 +1,22 @@
+<form method="POST">
+    <div>
+        {{ form.hidden_tag() }}
+        <fieldset class="name-field">
+            {{ form.name.label }}
+            {{ form.name(class='form-control', placeholder='Name') }}
+        </fieldset>
+        <fieldset class="description-field">
+            {{ form.description.label }}
+            {{ form.description(class='form-control', placeholder='Description') }}
+        </fieldset>
+        <fieldset class="comics-appeared-in-field">
+            {{ form.comics_appeared_in.label }}
+            {{ form.comics_appeared_in(class='form-control', placeholder='Number of Comics Appeared in') }}
+        </fieldset>
+        <fieldset class="super-power-field">
+            {{ form.super_power.label }}
+            {{ form.super_power(class='form-control', placeholder='Super Power') }}
+        </fieldset>
+        {{ form.submit_button(class='btn btn-primary btn-block mt-2')}}
+    </div>
+</form>
